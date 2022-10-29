@@ -6,7 +6,7 @@ W tym projekcie połączę kilka różnych narzędzi i modeli uczenia maszynoweg
 
 ## Etapy projektu:
 
-1. Pobranie obrazu satelitarnego z Open Access Hub.
+**1. Pobranie obrazu satelitarnego z Open Access Hub.**
 
 O danych: 
 
@@ -17,20 +17,26 @@ O danych:
 - satelita: Sentinel-2B
 - obszar: okolice Warszawy
 
-2. Wstępne zapoznanie się z danymi.
+**2. Wstępne zapoznanie się z danymi.**
 
 - wczytanie kanałów
 - przycięcie sceny do zasięgu Warszawy i najbliższych okolic;
 - wzmocnienie kontrastu kolorów na obrazie (wzmocnienie przestrzenne);
 - kompozycje barwne RGB: [4,3,2] (True colors), [8,4,3] (False colors), [11,8,2] (Agriculture), [8,11,12].
 
-3. Obliczenie wskaźników NDVI, NDWI, SCI.
-4. Stworzenie maski z Corine Land Cover, gdzie zera będą obszarami zabudowanymi, a jedynki niezabudowanymi, co przyda się w dalszym toku modelowania, podczas tworzenia modeli uczenia maszynowego.
-5. Przygotowanie wsadu dla modeli - zestawienie ich w dataframe w module ```pandas```.
-6. Transformacja danych wejściowych i podział na zbiór treningowy i testowy.
-7. Trening różnych klasyfikatorów dostępnych w pakiecie ```scikit-learn``` - spróbuję wykorzystać metody: Drzewa decyzyjne, Lasy losowe, Naiwny Bayesowski klasyfikator, Ada Boost i prostą sieć neuronową.
-8. Trening klasyfikatora opartego na uczeniu głębokim przy wykorzystaniu pakietu ```Keras```.
-9. Zestawienie i porównanie wyników otrzymanych po zastosowaniu poszczególnych modeli.
+**3. Obliczenie wskaźników NDVI, NDWI, SCI.**
+
+**4. Stworzenie maski z Corine Land Cover, gdzie zera będą obszarami zabudowanymi, a jedynki niezabudowanymi, co przyda się w dalszym toku modelowania, podczas tworzenia modeli uczenia maszynowego.**
+
+**5. Przygotowanie wsadu dla modeli - zestawienie ich w dataframe w module ```pandas```.**
+
+**6. Transformacja danych wejściowych i podział na zbiór treningowy i testowy.**
+
+**7. Trening różnych klasyfikatorów dostępnych w pakiecie ```scikit-learn``` - spróbuję wykorzystać metody: Drzewa decyzyjne, Lasy losowe, Naiwny Bayesowski klasyfikator, Ada Boost i prostą sieć neuronową.**
+
+**8. Trening klasyfikatora opartego na uczeniu głębokim przy wykorzystaniu pakietu ```Keras```.**
+
+**9. Zestawienie i porównanie wyników otrzymanych po zastosowaniu poszczególnych modeli.**
 
 ## Checkpointy:
 
