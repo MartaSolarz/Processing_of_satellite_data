@@ -23,7 +23,7 @@ Uczenie maszynowe zdobyło bardzo dużą popularność w zagadnieniach związany
 
 W tym projekcie połączę kilka różnych narzędzi i modeli uczenia maszynowego. Napiszę klasyfikator, którego zadaniem będzie odgadnięcie jednej z dwóch głównych klas rodzaju powierzchni (czy dana powierzchnia jest obszarem zabudowanym czy nie), bazując na zbiorze Corine Land Cover i trzech obrazach wskaźników teledetekcyjnych (NDVI, NDWI i SCI).
 
-## II. Etapy projektu:
+## II. Etapy projektu
 
 **1. Pobranie obrazu satelitarnego z Open Access Hub.**
 
@@ -58,7 +58,7 @@ O danych:
 
 **9. Zestawienie i porównanie wyników otrzymanych po zastosowaniu poszczególnych modeli.**
 
-## III. Zawartość projektu i biblioteki: ##
+## III. Zawartość projektu i biblioteki ##
 
 #### Plik główny projektu: #### 
 - ```main.ipynb```
@@ -84,7 +84,7 @@ Doinstalowane [```pip install -r requirements.txt```]:
 - ```numpy```
 - ```rasterio```
 
-## IV. Checkpointy:
+## IV. Checkpointy
 
 1. Do 2.11 - etapy 1,2 - DONE
 2. Do 16.11 - etapy 3,4
