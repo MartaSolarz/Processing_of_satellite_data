@@ -1,10 +1,29 @@
 # Wykorzystanie pakietów pythona i narzędzi uczenia maszynowego do analizy obrazu satelitarnego
 
+![Picture](https://th.bing.com/th/id/R.dfd389c03ec22d93ccaf303523debda5?rik=x6WXK7JOwXNWGQ&pid=ImgRaw&r=0)
+
+Źródło: *https://th.bing.com/th/id/R.dfd389c03ec22d93ccaf303523debda5?rik=x6WXK7JOwXNWGQ&pid=ImgRaw&r=0*
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+## Spis treści: ##
+**I. Wstęp**
+
+**II. Etapy projektu**
+
+**III. Zawartość projektu i biblioteki**
+
+**IV. Checkpointy**
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+## I. Wstęp
+
 Uczenie maszynowe zdobyło bardzo dużą popularność w zagadnieniach związanych z analizą i przetwarzaniem obrazów, w tym obrazów satelitarnych. Do tego łatwy dostęp do narzędzi umożliwiających tworzenie modeli uczenia maszynowego pozwala na szybkie prototypowanie nowych systemów.
 
 W tym projekcie połączę kilka różnych narzędzi i modeli uczenia maszynowego. Napiszę klasyfikator, którego zadaniem będzie odgadnięcie jednej z dwóch głównych klas rodzaju powierzchni (czy dana powierzchnia jest obszarem zabudowanym czy nie), bazując na zbiorze Corine Land Cover i trzech obrazach wskaźników teledetekcyjnych (NDVI, NDWI i SCI).
 
-## Etapy projektu:
+## II. Etapy projektu:
 
 **1. Pobranie obrazu satelitarnego z Open Access Hub.**
 
@@ -39,9 +58,37 @@ O danych:
 
 **9. Zestawienie i porównanie wyników otrzymanych po zastosowaniu poszczególnych modeli.**
 
-## Checkpointy:
+## III. Zawartość projektu i biblioteki: ##
+
+#### Plik główny projektu: #### 
+- ```main.ipynb```
+
+#### Dane: ####
+- ```data/*```
+
+#### Moduły własne: ####
+- ```bands/basic_processing.py``` - wzmocnienie kontrastu na obrazie;
+- ```bands/display.py``` - wyświetlanie obrazów satelitarnych;
+- ```bands/load.py``` - wczytywanie kanałów;
+- ```color_compositions.py``` - tworzenie komozycji barwnych;
+- ```cut_image_processor.py``` - przycinanie obrazów satelitarnych;
+
+#### Moduły zewnętrzne pythona:
+
+Z biblioteki standardowej:
+- ```os```
+- ```typing```
+
+Doinstalowane [```pip install -r requirements.txt```]: 
+- ```matplotlib```
+- ```numpy```
+- ```rasterio```
+
+## IV. Checkpointy:
 
 1. Do 2.11 - etapy 1,2 - DONE
 2. Do 16.11 - etapy 3,4
 3. Do 30.11 - etapy 5,6
 4. Do 22.12 - etapy 7,8,9 (cały projekt)
+
+**Autor:** Marta Solarz
