@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 
 class BandProcessor:
 
-    def __init__(self, band) -> None:
+    def __init__(self, band: str) -> None:
         self.band = band
         self.bins = 256
 
