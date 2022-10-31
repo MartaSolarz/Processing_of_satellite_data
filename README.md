@@ -10,19 +10,20 @@ W tym projekcie połączę kilka różnych narzędzi i modeli uczenia maszynoweg
 
 O danych: 
 
-- data pozyskania: 2020-09-14T09:50:29.024Z
+- data pozyskania: 2020-09-14 09:50:29.024
 - filename: S2B_MSIL1C_20200914T095029_N0209_R079_T34UDC_20200914T111045.SAFE
 - identifier: S2B_MSIL1C_20200914T095029_N0209_R079_T34UDC_20200914T111045
-- instrument: MSI
 - satelita: Sentinel-2B
+- instrument: MSI
 - obszar: okolice Warszawy
 
 **2. Wstępne zapoznanie się z danymi.**
 
-- wczytanie kanałów
+- wczytanie kanałów;
 - przycięcie sceny do zasięgu Warszawy i najbliższych okolic;
 - wzmocnienie kontrastu kolorów na obrazie (wzmocnienie przestrzenne);
-- kompozycje barwne RGB: [4,3,2] (True colors), [8,4,3] (False colors), [11,8,2] (Agriculture), [8,11,12].
+- kompozycje barwne RGB: 
+ ```[4,3,2] (True colors), [8,4,3] (False colors), [11,8,2] (Agriculture), [8,11,12]```.
 
 **3. Obliczenie wskaźników NDVI, NDWI, SCI.**
 
