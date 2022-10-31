@@ -13,7 +13,7 @@
 
 **III. Zawartość projektu i biblioteki**
 
-**IV. Checkpointy**
+**IV. Punkty kontrolne**
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -30,8 +30,8 @@ W tym projekcie połączę kilka różnych narzędzi i modeli uczenia maszynoweg
 O danych: 
 
 - data pozyskania: 2020-09-14 09:50:29.024
-- filename: S2B_MSIL1C_20200914T095029_N0209_R079_T34UDC_20200914T111045.SAFE
-- identifier: S2B_MSIL1C_20200914T095029_N0209_R079_T34UDC_20200914T111045
+- nazwa pliku: S2B_MSIL1C_20200914T095029_N0209_R079_T34UDC_20200914T111045.SAFE
+- identyfikatorr: S2B_MSIL1C_20200914T095029_N0209_R079_T34UDC_20200914T111045
 - satelita: Sentinel-2B
 - instrument: MSI
 - obszar: okolice Warszawy
@@ -42,7 +42,7 @@ O danych:
 - przycięcie sceny do zasięgu Warszawy i najbliższych okolic;
 - wzmocnienie kontrastu kolorów na obrazie (wzmocnienie przestrzenne);
 - kompozycje barwne RGB: 
- ```[4,3,2] (True colors), [8,4,3] (False colors), [11,8,2] (Agriculture), [8,11,12]```.
+ ```[4,3,2] (Barwy naturalne), [8,4,3] (Fałszywe kolory), [11,8,2] (Rolnictwo), [8,11,12]```.
 
 **3. Obliczenie wskaźników NDVI, NDWI, SCI.**
 
@@ -84,9 +84,9 @@ Doinstalowane [```pip install -r requirements.txt```]:
 - ```numpy```
 - ```rasterio```
 
-## IV. Checkpointy
+## IV. Punkty kontrolne
 
-1. Do 2.11 - etapy 1,2 - DONE
+1. Do 2.11 - etapy 1,2 - ZROBIONE
 2. Do 16.11 - etapy 3,4
 3. Do 30.11 - etapy 5,6
 4. Do 22.12 - etapy 7,8,9 (cały projekt)
