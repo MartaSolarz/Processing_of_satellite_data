@@ -1,4 +1,4 @@
-"Loading selected bands from a directory and validating their names"
+"""Loading selected bands from a directory and validating their names"""
 
 import os
 from typing import List
