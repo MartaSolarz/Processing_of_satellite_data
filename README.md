@@ -89,6 +89,7 @@ O danych:
 
 #### Dane: ####
 - ```data/*```
+- ```results/*``` - dane wynikowe;
 
 #### Moduły własne: ####
 - ```bands/basic_processing.py``` - wzmocnienie kontrastu na obrazie;
@@ -96,6 +97,8 @@ O danych:
 - ```bands/load.py``` - wczytywanie kanałów;
 - ```color_compositions.py``` - tworzenie komozycji barwnych;
 - ```cut_image_processor.py``` - przycinanie obrazów satelitarnych;
+- ```indexes.py``` - obliczanie wskaźników teledetekcyjnych;
+- ```save_data.py``` - zapisywanie obrazów do pliku;
 
 #### Moduły zewnętrzne pythona:
 
