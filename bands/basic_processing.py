@@ -1,4 +1,4 @@
-"""Image processing - enhancement of contrast by normalization"""
+"""Przetworzenie obrazów - wzmocnienie kontrastu przez normalizację"""
 
 from typing import Tuple
 
