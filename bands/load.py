@@ -1,4 +1,4 @@
-"""Loading selected bands from a directory and validating their names"""
+"""Załadowanie wybranych kanałów z folderu i sprawdzenie poprawności ich nazw"""
 
 import os
 from typing import List
