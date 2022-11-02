@@ -36,6 +36,24 @@ O danych:
 - instrument: MSI
 - obszar: okolice Warszawy
 
+**Kanały Sentinela 2:**
+
+| Numer kanału | Nazwa |
+|--------------|-------------|
+| Band 1 | Coastal aerosol |
+| Band 2 | Blue	|
+| Band 3 | Green |
+| Band 4 | Red |
+| Band 5 | Vegetation red edge	|
+| Band 6 | Vegetation red edge	|
+| Band 7 | Vegetation red edge	|
+| Band 8 | NIR	|
+| Band 8A | Narrow NIR	|
+| Band 9 | Water vapour	|
+| Band 10 | SWIR (Cirrus)	|
+| Band 11 | SWIR |
+| Band 12 | SWIR |
+
 **2. Wstępne zapoznanie się z danymi.**
 
 - wczytanie kanałów;
@@ -44,7 +62,13 @@ O danych:
 - kompozycje barwne RGB: 
  ```[4,3,2] (Barwy naturalne), [8,4,3] (Fałszywe kolory), [11,8,2] (Rolnictwo), [8,11,12]```.
 
-**3. Obliczenie wskaźników NDVI, NDWI, SCI.**
+**3. Obliczenie wskaźników NDVI, NDWI, SCI oraz zapis tych plików do folderu results.**
+
+> **NDVI** = (NIR - Red) / (NIR + Red)
+
+> **NDWI** = (Green - NIR) / (Green + NIR)
+
+> **SCI** = (SWIR - NIR) / (SWIR + NIR)
 
 **4. Stworzenie maski z Corine Land Cover, gdzie zera będą obszarami zabudowanymi, a jedynki niezabudowanymi, co przyda się w dalszym toku modelowania, podczas tworzenia modeli uczenia maszynowego.**
 
