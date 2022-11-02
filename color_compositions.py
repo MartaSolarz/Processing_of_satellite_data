@@ -1,4 +1,4 @@
-"""Build RGB compositions"""
+"""Stworzenie kompozycji RGB"""
 
 from typing import List
 
