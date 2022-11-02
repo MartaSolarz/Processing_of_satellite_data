@@ -1,4 +1,4 @@
-"""Crop the scene to the selected window"""
+"""Przycięcie sceny do wybranego okna"""
 
 from typing import Any, List
 
