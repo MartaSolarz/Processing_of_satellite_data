@@ -11,6 +11,16 @@
 
 **II. Etapy projektu**
 
+1. Pobranie obrazu satelitarnego z Open Access Hub.
+2. Wstępne zapoznanie się z danymi.
+3. Obliczenie wskaźników NDVI, NDWI, SCI oraz zapis tych plików do folderu results.
+4. Stworzenie maski z Corine Land Cover w celu przygotowania maski do klasyfikacji dla algorytmów ML
+5. Przygotowanie wsadu dla modeli - zestawienie ich w dataframe w module ```pandas```.
+6. Transformacja danych wejściowych i podział na zbiór treningowy i testowy.
+7. Trening różnych klasyfikatorów dostępnych w pakiecie ```scikit-learn``` - spróbuję wykorzystać metody: Drzewa decyzyjne, Lasy losowe, Naiwny Bayesowski klasyfikator, Ada Boost i prostą sieć neuronową.
+8. Trening klasyfikatora opartego na uczeniu głębokim przy wykorzystaniu pakietu ```Keras```.
+9. Zestawienie i porównanie wyników otrzymanych po zastosowaniu poszczególnych modeli.
+
 **III. Zawartość projektu i biblioteki**
 
 **IV. Punkty kontrolne**
@@ -36,7 +46,7 @@ O danych:
 - instrument: MSI
 - obszar: okolice Warszawy
 
-**Kanały Sentinela 2:**
+Kanały Sentinela 2:
 
 | Numer kanału | Nazwa |
 |--------------|-------------|
@@ -70,7 +80,7 @@ O danych:
 
 > **SCI** = (SWIR - NIR) / (SWIR + NIR)
 
-**4. Stworzenie maski z Corine Land Cover w celu przygotowania maski do klasyfikacji dla algorytmów ML.
+**4. Stworzenie maski z Corine Land Cover w celu przygotowania maski do klasyfikacji dla algorytmów ML.**
 
 **Krok 1** - resampling obrazu (z powodu różnic w projekcji obrazów z Sentinela a Corine Land Cover);
 
