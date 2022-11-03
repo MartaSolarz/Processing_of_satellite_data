@@ -70,7 +70,13 @@ O danych:
 
 > **SCI** = (SWIR - NIR) / (SWIR + NIR)
 
-**4. Stworzenie maski z Corine Land Cover, gdzie zera będą obszarami zabudowanymi, a jedynki niezabudowanymi, co przyda się w dalszym toku modelowania, podczas tworzenia modeli uczenia maszynowego.**
+**4. Stworzenie maski z Corine Land Cover w celu przygotowania maski do klasyfikacji dla algorytmów ML.
+
+**Krok 1** - resampling obrazu (z powodu różnic w projekcji obrazów z Sentinela a Corine Land Cover);
+
+**Krok 2** - stworzenie pliku binarnego, gdzie zera reprezentują obszary zabudowanymi, a jedynki niezabudowane;
+
+**Krok 3** - zapisanie do nowego pliku otrzymanego obrazu.
 
 **5. Przygotowanie wsadu dla modeli - zestawienie ich w dataframe w module ```pandas```.**
 
@@ -84,8 +90,9 @@ O danych:
 
 ## III. Zawartość projektu i biblioteki ##
 
-#### Plik główny projektu: #### 
-- ```main.ipynb```
+#### Pliki główne projektu: #### 
+- ```main_1.ipynb``` - etapy 1,2,3
+- ```main_2.ipynb``` - etap 4
 
 #### Dane: ####
 - ```data/*```
@@ -98,6 +105,7 @@ O danych:
 - ```color_compositions.py``` - tworzenie komozycji barwnych;
 - ```cut_image_processor.py``` - przycinanie obrazów satelitarnych;
 - ```indexes.py``` - obliczanie wskaźników teledetekcyjnych;
+- ```reproject_raster.py``` - resampling obrazu;
 - ```save_data.py``` - zapisywanie obrazów do pliku;
 
 #### Moduły zewnętrzne pythona:
@@ -114,7 +122,7 @@ Doinstalowane [```pip install -r requirements.txt```]:
 ## IV. Punkty kontrolne
 
 1. Do 2.11 - etapy 1,2 - ZROBIONE
-2. Do 16.11 - etapy 3,4
+2. Do 16.11 - etapy 3,4 - ZROBIONE
 3. Do 30.11 - etapy 5,6
 4. Do 22.12 - etapy 7,8,9 (cały projekt)
 
