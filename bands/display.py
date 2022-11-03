@@ -29,3 +29,13 @@ def show_band_index(band: Any, normalize=True, cmap='gray', cbar=False):
         plt.colorbar()
     
     plt.plot()
+    
+
+def display_parameters(band: Any) -> Tuple:
+    """Wyświetlenie informacji o kanale."""
+    with rio.open(band) as s2:
+        base_band = s2.read(1)
+        base_crs = s2.crs
+        base_transform = s2.transform
+
+        return base_band, base_crs, base_transform
