@@ -82,11 +82,11 @@ Kanały Sentinela 2:
 
 **4. Stworzenie maski z Corine Land Cover w celu przygotowania maski do klasyfikacji dla algorytmów ML.**
 
-**Krok 1** - resampling obrazu (z powodu różnic w projekcji obrazów z Sentinela a Corine Land Cover);
+> **Krok 1** - resampling obrazu (z powodu różnic w projekcji obrazów z Sentinela a Corine Land Cover);
 
-**Krok 2** - stworzenie pliku binarnego, gdzie zera reprezentują obszary zabudowanymi, a jedynki niezabudowane;
+> **Krok 2** - stworzenie pliku binarnego, gdzie zera reprezentują obszary zabudowanymi, a jedynki niezabudowane;
 
-**Krok 3** - zapisanie do nowego pliku otrzymanego obrazu.
+> **Krok 3** - zapisanie do nowego pliku otrzymanego obrazu.
 
 **5. Przygotowanie wsadu dla modeli - zestawienie ich w dataframe w module ```pandas```.**
 
