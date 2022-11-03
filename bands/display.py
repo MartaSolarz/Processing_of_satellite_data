@@ -4,6 +4,7 @@ from typing import Any
 
 import matplotlib.pyplot as plt
 import numpy as np
+import rasterio as rio
 
 from bands.basic_processing import BandProcessor
 
