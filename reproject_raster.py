@@ -1,6 +1,7 @@
 """Resampling obrazu."""
 
 from typing import Any
+
 import numpy as np
 from rasterio.warp import reproject, Resampling
 
