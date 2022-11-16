@@ -1,6 +1,6 @@
 """Funkcje wyświetlające w różny sposób obrazy satelitarne."""
 
-from typing import Any
+from typing import Any, Tuple
 
 import matplotlib.pyplot as plt
 import numpy as np
