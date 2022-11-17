@@ -90,7 +90,15 @@ Kanały Sentinela 2:
 
 **5. Przygotowanie wsadu dla modeli - zestawienie ich w dataframe w module ```pandas```.**
 
+> **Krok 1** - wczytanie wcześniej przygotowanych plików: clc, NDVI, NDWI, SCI;
+
+> **Krok 2** - wypełnienie pustej `numpy array` wartościami;
+
+> **Krok 3** - transformacja tablicy do data frame z modułu `pandas`.
+
 **6. Transformacja danych wejściowych i podział na zbiór treningowy i testowy.**
+
+Wykorzystanie funkcji do podziału danych na zbiór testowy i treningowy z biblioteki `scikit-learn`.
 
 **7. Trening różnych klasyfikatorów dostępnych w pakiecie ```scikit-learn``` - spróbuję wykorzystać metody: Drzewa decyzyjne, Lasy losowe, Naiwny Bayesowski klasyfikator, Ada Boost i prostą sieć neuronową.**
 
@@ -103,6 +111,7 @@ Kanały Sentinela 2:
 #### Pliki główne projektu: #### 
 - ```main_1.ipynb``` - etapy 1,2,3
 - ```main_2.ipynb``` - etap 4
+- ```main_3.ipynb``` - etap 5,6
 
 #### Dane: ####
 - ```data/*```
@@ -133,7 +142,7 @@ Doinstalowane [```pip install -r requirements.txt```]:
 
 1. Do 2.11 - etapy 1,2 - ZROBIONE
 2. Do 16.11 - etapy 3,4 - ZROBIONE
-3. Do 30.11 - etapy 5,6
+3. Do 30.11 - etapy 5,6 - ZROBIONE
 4. Do 22.12 - etapy 7,8,9 (cały projekt)
 
 **Autor:** Marta Solarz
