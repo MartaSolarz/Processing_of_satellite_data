@@ -133,7 +133,12 @@ Z biblioteki standardowej:
 - ```os```
 - ```typing```
 
-Doinstalowane [```pip install -r requirements.txt```]: 
+Doinstalowane:
+
+```bash
+$ pip install -r requirements.txt
+```
+
 - ```matplotlib```
 - ```numpy```
 - ```rasterio```
