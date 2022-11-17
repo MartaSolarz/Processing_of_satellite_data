@@ -1,7 +1,9 @@
 """Załadowanie wybranych kanałów z folderu i sprawdzenie poprawności ich nazw"""
 
 import os
-from typing import List
+from typing import Any, List
+
+import rasterio as rio
 
 PATH_DATA = r'.\data'
 
@@ -47,3 +49,15 @@ class LoadBands:
 
     def load_data(self) -> List[str]:
         return [os.path.join(PATH_DATA, band) for band in self.extract_bands]
+
+
+class LoadBandsFromTif:
+
+    def __init__(self, band_path: Any) -> None:
+        self.band = band_path
+
+    def get_band(self) -> Any:
+        with rio.open(self.band, 'r') as src:
+            band = src.read(1)
+        
+        return band
