@@ -141,7 +141,9 @@ $ pip install -r requirements.txt
 
 - ```matplotlib```
 - ```numpy```
+- ```pandas```
 - ```rasterio```
+- ```scikit-learn```
 
 ## IV. Punkty kontrolne
 
