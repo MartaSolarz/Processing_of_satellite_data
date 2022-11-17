@@ -98,7 +98,7 @@ Kanały Sentinela 2:
 
 **6. Transformacja danych wejściowych i podział na zbiór treningowy i testowy.**
 
-Wykorzystanie funkcji do podziału danych na zbiór testowy i treningowy z biblioteki `scikit-learn`.
+> Wykorzystanie funkcji do podziału danych na zbiór testowy i treningowy z biblioteki `scikit-learn`.
 
 **7. Trening różnych klasyfikatorów dostępnych w pakiecie ```scikit-learn``` - spróbuję wykorzystać metody: Drzewa decyzyjne, Lasy losowe, Naiwny Bayesowski klasyfikator, Ada Boost i prostą sieć neuronową.**
 
