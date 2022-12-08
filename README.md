@@ -17,7 +17,7 @@
 4. Stworzenie maski z Corine Land Cover w celu przygotowania maski do klasyfikacji dla algorytmów ML
 5. Przygotowanie wsadu dla modeli - zestawienie ich w dataframe w module ```pandas```.
 6. Transformacja danych wejściowych i podział na zbiór treningowy i testowy.
-7. Trening różnych klasyfikatorów dostępnych w pakiecie ```scikit-learn``` - spróbuję wykorzystać metody: Drzewa decyzyjne, Lasy losowe, Naiwny Bayesowski klasyfikator, Ada Boost i prostą sieć neuronową.
+7. Trening różnych klasyfikatorów dostępnych w pakiecie ```scikit-learn```.
 8. Trening klasyfikatora opartego na uczeniu głębokim przy wykorzystaniu pakietu ```Keras```.
 9. Zestawienie i porównanie wyników otrzymanych po zastosowaniu poszczególnych modeli.
 
@@ -100,7 +100,7 @@ Kanały Sentinela 2:
 
 > Wykorzystanie funkcji do podziału danych na zbiór testowy i treningowy z biblioteki `scikit-learn`.
 
-**7. Trening różnych klasyfikatorów dostępnych w pakiecie ```scikit-learn``` **
+**7. Trening różnych klasyfikatorów dostępnych w pakiecie ```scikit-learn```.**
 
 Wykorzystane metody: 
 - Drzewa decyzyjne, 
