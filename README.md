@@ -100,18 +100,27 @@ Kanały Sentinela 2:
 
 > Wykorzystanie funkcji do podziału danych na zbiór testowy i treningowy z biblioteki `scikit-learn`.
 
-**7. Trening różnych klasyfikatorów dostępnych w pakiecie ```scikit-learn``` - spróbuję wykorzystać metody: Drzewa decyzyjne, Lasy losowe, Naiwny Bayesowski klasyfikator, Ada Boost i prostą sieć neuronową.**
+**7. Trening różnych klasyfikatorów dostępnych w pakiecie ```scikit-learn``` **
+
+Wykorzystane metody: 
+- Drzewa decyzyjne, 
+- Lasy losowe, 
+- Naiwny Bayesowski klasyfikator, 
+- Ada Boost,
+- prosta sieć neuronowa.
 
 **8. Trening klasyfikatora opartego na uczeniu głębokim przy wykorzystaniu pakietu ```Keras```.**
 
 **9. Zestawienie i porównanie wyników otrzymanych po zastosowaniu poszczególnych modeli.**
+
+Zestawione w pliku `raport_koncowy.md`.
 
 ## III. Zawartość projektu i biblioteki ##
 
 #### Pliki główne projektu: #### 
 - ```main_1.ipynb``` - etapy 1,2,3
 - ```main_2.ipynb``` - etap 4
-- ```main_3.ipynb``` - etap 5,6
+- ```main_3.ipynb``` - etap 5,6,7,7
 
 #### Dane: ####
 - ```data/*```
@@ -144,6 +153,8 @@ $ pip install -r requirements.txt
 - ```pandas```
 - ```rasterio```
 - ```scikit-learn```
+- ```keras```
+- ```tensorflow```
 
 ## IV. Punkty kontrolne
 
