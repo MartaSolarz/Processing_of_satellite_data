@@ -120,7 +120,7 @@ Zestawione w pliku `raport_koncowy.md`.
 #### Pliki główne projektu: #### 
 - ```main_1.ipynb``` - etapy 1,2,3
 - ```main_2.ipynb``` - etap 4
-- ```main_3.ipynb``` - etap 5,6,7,7
+- ```main_3.ipynb``` - etap 5,6,7,8
 
 #### Dane: ####
 - ```data/*```
