@@ -19,7 +19,7 @@
 6. Transformacja danych wejściowych i podział na zbiór treningowy i testowy.
 7. Trening różnych klasyfikatorów dostępnych w pakiecie ```scikit-learn```.
 8. Trening klasyfikatora opartego na uczeniu głębokim przy wykorzystaniu pakietu ```Keras```.
-9. Zestawienie i porównanie wyników otrzymanych po zastosowaniu poszczególnych modeli.
+9. Zestawienie i porównanie wyników macierzy błędów otrzymanych po zastosowaniu poszczególnych modeli.
 
 **III. Zawartość projektu i biblioteki**
 
@@ -111,7 +111,7 @@ Wykorzystane metody:
 
 **8. Trening klasyfikatora opartego na uczeniu głębokim przy wykorzystaniu pakietu ```Keras```.**
 
-**9. Zestawienie i porównanie wyników otrzymanych po zastosowaniu poszczególnych modeli.**
+**9. Zestawienie i porównanie wyników macierzy błędów otrzymanych po zastosowaniu poszczególnych modeli.**
 
 Zestawione w pliku `raport_koncowy.md`.
 
@@ -161,6 +161,6 @@ $ pip install -r requirements.txt
 1. Do 2.11 - etapy 1,2 - ZROBIONE
 2. Do 16.11 - etapy 3,4 - ZROBIONE
 3. Do 30.11 - etapy 5,6 - ZROBIONE
-4. Do 22.12 - etapy 7,8,9 (cały projekt)
+4. Do 22.12 - etapy 7,8,9 (cały projekt) - ZROBIONE
 
 **Autor:** Marta Solarz
