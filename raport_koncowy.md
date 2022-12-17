@@ -1,4 +1,4 @@
-# RAPORT KOŃCOWY - INTERPRETACJA WYNIKÓW
+# RAPORT KOŃCOWY
 
 ## Czas trwania poszczególnych klasyfikacji:
 
