@@ -2,7 +2,7 @@
 
 ## Czas trwania poszczególnych klasyfikacji:
 
-| Nazwa | Czas |
+| Nazwa | Czas trwania klasyfikacji |
 |--------------|-------------|
 | Drzewa decyzyjne | 21.7 s |
 | Las losowy| 31.8 s |
