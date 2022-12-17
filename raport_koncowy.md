@@ -1,6 +1,6 @@
 # RAPORT KOŃCOWY - INTERPRETACJA WYNIKÓW
 
-Czas trwania poszczególnych klasyfikacji:
+## Czas trwania poszczególnych klasyfikacji:
 
 | Nazwa | Czas |
 |--------------|-------------|
@@ -9,9 +9,9 @@ Czas trwania poszczególnych klasyfikacji:
 | Naiwny Bayes | 0.9 s |
 | Ada Boost| 1 min 15.7 s |
 | Prosta sieć neuronowa | 6 min 4.7 s |
-| Model oparty na głębokim uczeniu | |
+| Model oparty na głębokim uczeniu | 5 min 2.1 s |
 
-Porównanie wyników:
+## Porównanie wyników:
 
 | Nazwa | Wynik | Dokładność całkowita | F1 |
 | ----- | ------ |------------|-----|
@@ -26,22 +26,26 @@ Legenda do wyniku (macierzy błędu):
 * 0 - obszar sklasyfikowany jako niezabudowany
 * 1 - obszar sklasyfikowany jako zabudowany
 
-Histogramy pokazują  
 [1]: results/drzewa_decyzyjne.png
+
 [2]: results/las_losowy.png
+
 [3]: results/bayes.png
+
 [4]: results/ada.png
+
 [5]: results/siec_neuronowa.png
+
 [6]: results/keras.png
 
-Najlepsza dokładność całkowita: las losowy
+> Najlepsza dokładność całkowita: las losowy
 
-Najgorsza dokładność całkowita: Naiwny Bayes
+> Najgorsza dokładność całkowita: Naiwny Bayes
 
-Najlepsza dokładność dla klasy obszaru niezabudowanego: Naiwny Bayes (0.68)
+> Najlepsza dokładność dla klasy obszaru niezabudowanego: Naiwny Bayes (0.68)
 
-Najgorsza dokładność dla klasy obszaru niezabudowanego: ADA (0.5)
+> Najgorsza dokładność dla klasy obszaru niezabudowanego: ADA (0.5)
 
-Najlepsza dokładność dla klasy obszaru zabudowanego: las losowy, ADA (0.86)
+> Najlepsza dokładność dla klasy obszaru zabudowanego: las losowy, ADA (0.86)
 
-Najgorsza dokładność dla klasy obszaru zabudowanego: Naiwny Bayes (0.65)
+> Najgorsza dokładność dla klasy obszaru zabudowanego: Naiwny Bayes (0.65)
