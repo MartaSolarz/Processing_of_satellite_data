@@ -19,7 +19,7 @@
 6. Transformacja danych wejściowych i podział na zbiór treningowy i testowy.
 7. Trening różnych klasyfikatorów dostępnych w pakiecie ```scikit-learn```.
 8. Trening klasyfikatora opartego na uczeniu głębokim przy wykorzystaniu pakietu ```Keras```.
-9. Zestawienie i porównanie wyników macierzy błędów otrzymanych po zastosowaniu poszczególnych modeli.
+9. Zestawienie i porównanie wyników macierzy błędów otrzymanych po zastosowaniu poszczególnych metod.
 
 **III. Zawartość projektu i biblioteki**
 
@@ -111,7 +111,7 @@ Wykorzystane metody:
 
 **8. Trening klasyfikatora opartego na uczeniu głębokim przy wykorzystaniu pakietu ```Keras```.**
 
-**9. Zestawienie i porównanie wyników macierzy błędów otrzymanych po zastosowaniu poszczególnych modeli.**
+**9. Zestawienie i porównanie wyników macierzy błędów otrzymanych po zastosowaniu poszczególnych metod.**
 
 Zestawione w pliku `raport_koncowy.md`.
 
