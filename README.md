@@ -1,54 +1,54 @@
-# Wykorzystanie pakietów pythona i narzędzi uczenia maszynowego do analizy obrazu satelitarnego
+# Using Python Packages and Machine Learning Tools to Analyze Satellite Images
 
-![Picture](https://th.bing.com/th/id/R.dfd389c03ec22d93ccaf303523debda5?rik=x6WXK7JOwXNWGQ&pid=ImgRaw&r=0)
+![Picture](https://maxarv2-cms-production.s3.amazonaws.com/uploads/image/image_value/3708/constellation_beauty_shots_2-80.jpg)
 
-Źródło: *https://th.bing.com/th/id/R.dfd389c03ec22d93ccaf303523debda5?rik=x6WXK7JOwXNWGQ&pid=ImgRaw&r=0*
-
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-## Spis treści: ##
-**I. Wstęp**
-
-**II. Etapy projektu**
-
-1. Pobranie obrazu satelitarnego z Open Access Hub.
-2. Wstępne zapoznanie się z danymi.
-3. Obliczenie wskaźników NDVI, NDWI, SCI oraz zapis tych plików do folderu results.
-4. Stworzenie maski z Corine Land Cover w celu przygotowania maski do klasyfikacji dla algorytmów ML
-5. Przygotowanie wsadu dla modeli - zestawienie ich w dataframe w module ```pandas```.
-6. Transformacja danych wejściowych i podział na zbiór treningowy i testowy.
-7. Trening różnych klasyfikatorów dostępnych w pakiecie ```scikit-learn```.
-8. Trening klasyfikatora opartego na uczeniu głębokim przy wykorzystaniu pakietu ```Keras```.
-9. Zestawienie i porównanie wyników macierzy błędów otrzymanych po zastosowaniu poszczególnych metod.
-
-**III. Zawartość projektu i biblioteki**
-
-**IV. Punkty kontrolne**
+Source: *https://maxarv2-cms-production.s3.amazonaws.com/uploads/image/image_value/3708/constellation_beauty_shots_2-80.jpg*
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-## I. Wstęp
+## List of contents: ##
+**I. Introduction**
 
-Uczenie maszynowe zdobyło bardzo dużą popularność w zagadnieniach związanych z analizą i przetwarzaniem obrazów, w tym obrazów satelitarnych. Do tego łatwy dostęp do narzędzi umożliwiających tworzenie modeli uczenia maszynowego pozwala na szybkie prototypowanie nowych systemów.
+**II. Project stages**
 
-W tym projekcie połączę kilka różnych narzędzi i modeli uczenia maszynowego. Napiszę klasyfikator, którego zadaniem będzie odgadnięcie jednej z dwóch głównych klas rodzaju powierzchni (czy dana powierzchnia jest obszarem zabudowanym czy nie), bazując na zbiorze Corine Land Cover i trzech obrazach wskaźników teledetekcyjnych (NDVI, NDWI i SCI).
+1. Download a satellite image from the Open Access Hub.
+2. Initial reading of the data.
+3. Calculation of NDVI, NDWI, SCI indicators and saving these files to the results folder.
+4. Creating a mask with Corine Land Cover to prepare the mask for classification for ML algorithms
+5. Preparing the input for models - compiling them in the dataframe in the ``pandas``` module.
+6. Transformation of input data and division into training and testing sets.
+7. Training of various classifiers available in the ```scikit-learn``` package.
+8. Training of a classifier based on deep learning using the ```Keras``` package.
+9. List and comparison of error matrix results obtained after applying individual methods.
 
-## II. Etapy projektu
+**III. Project and library content**
 
-**1. Pobranie obrazu satelitarnego z Open Access Hub.**
+**IV. Checkpoints**
 
-O danych: 
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-- data pozyskania: 2020-09-14 09:50:29.024
-- nazwa pliku: S2B_MSIL1C_20200914T095029_N0209_R079_T34UDC_20200914T111045.SAFE
-- identyfikatorr: S2B_MSIL1C_20200914T095029_N0209_R079_T34UDC_20200914T111045
-- satelita: Sentinel-2B
+## I. Introduction
+
+Machine learning has gained great popularity in issues related to the analysis and processing of images, including satellite images. In addition, easy access to tools for creating machine learning models allows for quick prototyping of new systems.
+
+In this project I will combine several different machine learning tools and models. I will write a classifier whose task will be to guess one of the two main classes of surface type (whether a given surface is a built-up area or not), based on the Corine Land Cover set and three remote sensing indicator images (NDVI, NDWI and SCI).
+
+## II. Project stages
+
+**1. Downloading a satellite image from the Open Access Hub.**
+
+About data:
+
+- date of acquisition: 2020-09-14 09:50:29.024
+- file name: S2B_MSIL1C_20200914T095029_N0209_R079_T34UDC_20200914T111045.SAFE
+- identifier: S2B_MSIL1C_20200914T095029_N0209_R079_T34UDC_20200914T111045
+- satellite: Sentinel-2B
 - instrument: MSI
-- obszar: okolice Warszawy
+- area: around Warsaw
 
-Kanały Sentinela 2:
+Sentinel 2 channels:
 
-| Numer kanału | Nazwa |
+| Channel number | Name |
 |--------------|-------------|
 | Band 1 | Coastal aerosol |
 | Band 2 | Blue	|
@@ -64,15 +64,15 @@ Kanały Sentinela 2:
 | Band 11 | SWIR |
 | Band 12 | SWIR |
 
-**2. Wstępne zapoznanie się z danymi.**
+**2. Initial reading of the data.**
 
-- wczytanie kanałów;
-- przycięcie sceny do zasięgu Warszawy i najbliższych okolic;
-- wzmocnienie kontrastu kolorów na obrazie (wzmocnienie przestrzenne);
-- kompozycje barwne RGB: 
- ```[4,3,2] (Barwy naturalne), [8,4,3] (Fałszywe kolory), [11,8,2] (Rolnictwo), [8,11,12]```.
+- loading channels;
+- cutting the scene to Warsaw and the immediate vicinity;
+- enhancing the color contrast in the image (spatial enhancement);
+- RGB color compositions:
+  ```[4,3,2] (Natural colors), [8,4,3] (False colors), [11,8,2] (Agriculture), [8,11,12]```.
 
-**3. Obliczenie wskaźników NDVI, NDWI, SCI oraz zapis tych plików do folderu results.**
+**3. Calculation of NDVI, NDWI, SCI indicators and saving these files to the results folder.**
 
 > **NDVI** = (NIR - Red) / (NIR + Red)
 
@@ -80,69 +80,70 @@ Kanały Sentinela 2:
 
 > **SCI** = (SWIR - NIR) / (SWIR + NIR)
 
-**4. Stworzenie maski z Corine Land Cover w celu przygotowania maski do klasyfikacji dla algorytmów ML.**
+**4. Creating a mask with Corine Land Cover to prepare the mask for classification for ML algorithms.**
 
-> **Krok 1** - resampling obrazu (z powodu różnic w projekcji obrazów z Sentinela i Corine Land Cover);
+> **Step 1** - image resampling (due to differences in the projection of images from Sentinel and Corine Land Cover);
 
-> **Krok 2** - stworzenie pliku binarnego, gdzie zera reprezentują obszary zabudowane, a jedynki niezabudowane;
+> **Step 2** - creating a binary file, where zeros represent built-up areas and ones represent undeveloped areas;
 
-> **Krok 3** - zapisanie do nowego pliku otrzymanego obrazu.
+> **Step 3** - saving the received image to a new file.
 
-**5. Przygotowanie wsadu dla modeli - zestawienie ich w dataframe w module ```pandas```.**
+**5. Preparing input for models - compiling them in a dataframe in the ``pandas``` module.**
 
-> **Krok 1** - wczytanie wcześniej przygotowanych plików: clc, NDVI, NDWI, SCI;
+> **Step 1** - loading previously prepared files: clc, NDVI, NDWI, SCI;
 
-> **Krok 2** - wypełnienie pustej `numpy array` wartościami;
+> **Step 2** - filling empty `numpy array` with values;
 
-> **Krok 3** - transformacja tablicy do data frame z modułu `pandas`.
+> **Step 3** - transforming the array into a data frame from the `pandas` module.
 
-**6. Transformacja danych wejściowych i podział na zbiór treningowy i testowy.**
+**6. Transformation of input data and division into training and testing sets.**
 
-> Wykorzystanie funkcji do podziału danych na zbiór testowy i treningowy z biblioteki `scikit-learn`.
+> Using functions to divide data into a test and training set from the `scikit-learn` library.
 
-**7. Trening różnych klasyfikatorów dostępnych w pakiecie ```scikit-learn```.**
+**7. Training various classifiers available in the ```scikit-learn``` package.**
 
-Wykorzystane metody: 
-- Drzewa decyzyjne, 
-- Lasy losowe, 
-- Naiwny Bayesowski klasyfikator, 
-- Ada Boost,
-- prosta sieć neuronowa.
+Methods used:
+- Decision trees,
+- Random forests,
+- Naive Bayes classifier,
+-Ada Boost,
+- simple neural network.
 
-**8. Trening klasyfikatora opartego na uczeniu głębokim przy wykorzystaniu pakietu ```Keras```.**
+**8. Training a deep learning-based classifier using the ```Keras``` package.**
 
-**9. Zestawienie i porównanie wyników macierzy błędów otrzymanych po zastosowaniu poszczególnych metod.**
+**9. Summary and comparison of error matrix results obtained after applying individual methods.**
 
-Zestawione w pliku `raport_koncowy.md`.
+Listed in the file `raport_koncowy.md`.
 
-## III. Zawartość projektu i biblioteki ##
 
-#### Pliki główne projektu: #### 
+## III. Project and library content ##
+
+#### Main project files: #### 
 - ```main_1.ipynb``` - etapy 1,2,3
 - ```main_2.ipynb``` - etap 4
 - ```main_3.ipynb``` - etap 5,6,7,8
 
-#### Dane: ####
+#### Data: ####
 - ```data/*```
-- ```results/*``` - dane wynikowe;
+- ```results/*```
 
-#### Moduły własne: ####
-- ```bands/basic_processing.py``` - wzmocnienie kontrastu na obrazie;
-- ```bands/display.py``` - wyświetlanie obrazów satelitarnych;
-- ```bands/load.py``` - wczytywanie kanałów;
-- ```color_compositions.py``` - tworzenie komozycji barwnych;
-- ```cut_image_processor.py``` - przycinanie obrazów satelitarnych;
-- ```indexes.py``` - obliczanie wskaźników teledetekcyjnych;
-- ```reproject_raster.py``` - resampling obrazu;
-- ```save_data.py``` - zapisywanie obrazów do pliku;
+#### My own helpful packages: ####
+- ```bands/basic_processing.py``` - contrast enhancement in the image;
+- ```bands/display.py``` - displaying satellite images;
+- ```bands/load.py``` - loading channels;
+- ```color_compositions.py``` - creating color compositions;
+- ```cut_image_processor.py``` - cropping satellite images;
+- ```indexes.py``` - calculation of remote sensing indices;
+- ```reproject_raster.py``` - image resampling;
+- ```save_data.py``` - saving images to a file;
 
-#### Moduły zewnętrzne pythona:
+#### Python external modules:
 
-Z biblioteki standardowej:
+From the standard library:
 - ```os```
 - ```typing```
 
-Doinstalowane:
+Installed:
 
 ```bash
 $ pip install -r requirements.txt
@@ -156,11 +157,11 @@ $ pip install -r requirements.txt
 - ```keras```
 - ```tensorflow```
 
-## IV. Punkty kontrolne
+## IV. Checkpoints
 
-1. Do 2.11 - etapy 1,2 - ZROBIONE
-2. Do 16.11 - etapy 3,4 - ZROBIONE
-3. Do 30.11 - etapy 5,6 - ZROBIONE
-4. Do 22.12 - etapy 7,8,9 (cały projekt) - ZROBIONE
+1. November 2, 2022 - stages 1,2 - DONE
+2. November 16, 2022 - stages 3,4 - DONE
+3. November 30, 2022 - stages 5,6 - DONE
+4. December 22, 2022 - stages 7,8,9 (entire project) - DONE
 
-**Autor:** Marta Solarz
+**Author:** Marta Solarz
